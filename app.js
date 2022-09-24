@@ -1,5 +1,5 @@
-const userScore = 0;
-const compScore = 0;
+let userScore = 0;
+let compScore = 0;
 const userScore_span = document.getElementById("user_score");
 const compScore_span = document.getElementById("comp_score");
 const scoreBoard_div = document.querySelector(".score_board");
@@ -16,7 +16,9 @@ function getCompChoice() {
 }
 
 function win() {
-    console.log("You win!");
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
 }
 
 function lose() {
