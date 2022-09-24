@@ -15,23 +15,35 @@ function getCompChoice() {
     return choices[randomNumber];
 }
 
+function win() {
+    console.log("You win!");
+}
+
+function lose() {
+    console.log("You lose!");
+}
+
+function draw() {
+    console.log("Draw!");
+}
+
 function game(userChoice) {
     const compChoice = getCompChoice();
     switch (userChoice + compChoice) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
-            console.log("User wins!!");
+            win();
             break;
         case "rockpaper":
         case "paperscissors":
         case "scissorsrock":
-            console.log("You lose, Computer wins!!");
+            lose();
             break;
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-            console.log("It's a Draw.");
+            draw();
             break;
     }
 }
