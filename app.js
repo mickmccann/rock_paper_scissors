@@ -25,15 +25,18 @@ function win(userChoice, compChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = captWords(userChoice) + " beats " + captWords(compChoice) + ". You Win!!"
+    result_p.innerHTML = `🏆 ${captWords(userChoice)} beats ${captWords(compChoice)}. You Win 🏆`
 }
 
-function lose() {
-    
+function lose(userChoice, compChoice) {
+    compScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    result_p.innerHTML = `😭 ${captWords(userChoice)} loses to ${captWords(compChoice)}. You lost 😭`
 }
 
-function draw() {
-    
+function draw(userChoice, compChoice) {
+    result_p.innerHTML = `🥱 ${captWords(userChoice)} equals ${captWords(compChoice)}. It's a draw 🥱`
 }
 
 function game(userChoice) {
