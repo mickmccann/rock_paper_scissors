@@ -25,18 +25,24 @@ function win(userChoice, compChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `🏆 ${captWords(userChoice)} beats ${captWords(compChoice)}. You Win 🏆`
+    result_p.innerHTML = `🏆 ${captWords(userChoice)} beats ${captWords(compChoice)}. You Win 🏆`;
+    document.getElementById(userChoice).classList.add('highlight_win');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('highlight_win')} , 1000);
 }
 
 function lose(userChoice, compChoice) {
     compScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `😭 ${captWords(userChoice)} loses to ${captWords(compChoice)}. You lost 😭`
+    result_p.innerHTML = `😭 ${captWords(userChoice)} loses to ${captWords(compChoice)}. You lost 😭`;
+    document.getElementById(userChoice).classList.add('highlight_lose');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('highlight_lose')} , 1000);
 }
 
 function draw(userChoice, compChoice) {
-    result_p.innerHTML = `🥱 ${captWords(userChoice)} equals ${captWords(compChoice)}. It's a draw 🥱`
+    result_p.innerHTML = `🥱 ${captWords(userChoice)} equals ${captWords(compChoice)}. It's a draw 🥱`;
+    document.getElementById(userChoice).classList.add('highlight_draw');
+    setTimeout(function() {document.getElementById(userChoice).classList.remove('highlight_draw')} , 1000);
 }
 
 function game(userChoice) {

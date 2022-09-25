@@ -93,3 +93,21 @@ header > h1 {
     font-size: 20px;
     margin-top: 20px;
 }
+
+/* Highlight for win */
+.highlight_win {
+    border: 4px solid greenyellow;
+    box-shadow: 0 0 10px green;
+}
+
+/* Highlight for lose */
+.highlight_lose {
+    border: 4px solid rgb(209, 6, 6);
+    box-shadow: 0 0 10px rgb(128, 0, 0);
+}
+
+/* Highlight for draw */
+.highlight_draw {
+    border: 4px solid rgb(241, 238, 238);
+    box-shadow: 0 0 10px rgb(183, 177, 177);
+}
